@@ -1,0 +1,23 @@
+diff --git a/game.js b/game.js
+index 7595a9d..5daadb0 100644
+--- a/game.js
++++ b/game.js
+@@ -1167,8 +1167,7 @@ $(function () {
+     }
+   };
+ 
+-  var frameInterval = 25;
+-  var mainLoopId = setInterval(mainLoop, frameInterval);
++  var mainLoopId = setInterval(mainLoop, 25);
+ 
+   $(window).keydown(function (e) {
+     switch (KEY_CODES[e.keyCode]) {
+@@ -1182,7 +1181,7 @@ $(function () {
+           Text.renderText('PAUSED', 72, Game.canvasWidth/2 - 160, 120);
+         } else {
+           lastFrame = Date.now();
+-          mainLoopId = setInterval(mainLoop, frameInterval);
++          mainLoopId = setInterval(mainLoop, 10);
+         }
+         break;
+       case 'm': // mute
